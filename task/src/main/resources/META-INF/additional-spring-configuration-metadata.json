@@ -1,0 +1,17 @@
+{"properties": [
+  {
+    "name": "scrap.3o3.url",
+    "type": "java.lang.String",
+    "description": "A description for 'scrap.3o3.url'"
+  },
+  {
+    "name": "jwt.secret",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.secret'"
+  },
+  {
+    "name": "jwt.access-expired",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt.secret'"
+  }
+]}
