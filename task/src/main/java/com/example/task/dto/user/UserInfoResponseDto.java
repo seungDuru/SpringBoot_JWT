@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UserInfoResponseDto {
 	private String userId;
-    private String password;
     private String name;
     private String regNo;
 }

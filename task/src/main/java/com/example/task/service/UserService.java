@@ -116,6 +116,17 @@ public class UserService {
     	//토큰으로 PK 조회
     	String userId = jwtTokenProvider.getUserPk(jwtTokenDto.getAccessToken());
     	
+    	/*
+    	User user = userRepository.findById(userId)
+    			.orElseThrow(CUserNotFoundException::new);
+    	
+    	UserInfoResponseDto userInfoResponseDto = UserInfoResponseDto.builder()
+    			.userId(user.getUserId())
+    			.name(user.getName())
+    			.regNo(user.getRegNo())
+    			.build();
+    	*/
+    	
     	return userRepository.findById(userId)
     			.orElseThrow(CUserNotFoundException::new);
     }
@@ -154,6 +165,11 @@ public class UserService {
 			income.setUser(user);
 			incomeRepository.save(income);
 		}
+		/*
+		else {
+			//null에 대한 exception
+		}
+		*/
 		return incomeRepository.findByRegNo(income.getRegNo())
 				.orElseThrow(CUserNotFoundException::new);
 	}
